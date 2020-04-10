@@ -1,0 +1,16 @@
+{
+    "name": "Lambda Log",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Show lambda logs link on lambda aws lambda list screen",
+    "permissions": [],
+    "content_scripts": [
+        {
+            "matches": ["https://*.aws.amazon.com/lambda/home*"],
+            "js": ["content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_title": "Lambda Log"
+    }
+}
