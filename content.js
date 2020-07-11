@@ -25,6 +25,7 @@ const updateLogHeader = function() {
         headerRow.appendChild(th)
     }
 }
+
 const displayLog = function() {
     updateLogHeader()
 	console.log('display log called');
@@ -119,5 +120,9 @@ const start = function() {
 		console.log('In lambda design page');
 		startEnvVarCopyDisplay();
 	}
+	window.addEventListener('hashchange', function(){
+		start();
+	});
 }
+
 start();
